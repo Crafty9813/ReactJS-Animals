@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Home from './pages/Home'
 
 import AnimalCard from './components/AnimalCard'
 
@@ -12,11 +13,12 @@ function App() {
 
 
   return (
-    <> 
-      
-      {animalNumber === 1 && <AnimalCard animal = {{species: "Dog", description: "Came from wolves, cute."}}/>}
+      <>
+        <Home />
 
-      {/*
+      
+      {/*{animalNumber === 1 && <AnimalCard animal = {{species: "Dog", description: "Came from wolves, cute."}}/>}
+
       {animalNumber === 1? (
         <AnimalCard animal = {{species: "Dog", description: "Came from wolves, cute."}}/>
       ) : (
