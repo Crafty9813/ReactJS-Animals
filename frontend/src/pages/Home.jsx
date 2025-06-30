@@ -1,5 +1,6 @@
 import AnimalCard from "../components/AnimalCard";
 import { useState } from "react";
+import "../css/Home.css";
 
 function Home() {
   // useState hook sets searchQuery as the state of search box, setSearchQuery func to update it

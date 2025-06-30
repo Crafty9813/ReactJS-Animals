@@ -1,32 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Home from './pages/Home'
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./css/App.css";
+import Home from "./pages/Home";
+import Favorites from "./pages/Favorites";
+import NavBar from "./components/NavBar";
 
-import AnimalCard from './components/AnimalCard'
+import AnimalCard from "./components/AnimalCard";
 
 function App() {
-
-  const animalNumber = 1;
-
-
-
   return (
-      <>
-        <Home />
-
-      
-      {/*{animalNumber === 1 && <AnimalCard animal = {{species: "Dog", description: "Came from wolves, cute."}}/>}
-
-      {animalNumber === 1? (
-        <AnimalCard animal = {{species: "Dog", description: "Came from wolves, cute."}}/>
-      ) : (
-        <AnimalCard animal = {{species: "Cat", description: "Came from wildcats, cute."}}/>
-      )}
-      */}
-    </>
+    <div>
+      <NavBar />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
-export default App
+export default App;
