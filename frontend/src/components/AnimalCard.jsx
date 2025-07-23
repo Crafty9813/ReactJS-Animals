@@ -6,13 +6,12 @@ function AnimalCard({ animal }) {
   }
   return (
     <div className="animal-card">
-      <div className="animal-img">
-        <img src={animal.url} alt={animal.species} />
-        <div className="animal-overlay">
-          <button className="favorite-btn" onClick={onFavoriteClick}>
-            ♥
-          </button>
-        </div>
+      <div className="animal-img" style={{ position: "relative" }}>
+        <img src={animal.image} alt={animal.species} />
+        <button className="favorite-btn" onClick={onFavoriteClick}>
+          ♥
+        </button>
+        <div className="animal-overlay" />
       </div>
       <div className="animal-info">
         <h3>{animal.species}</h3>

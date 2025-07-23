@@ -1,14 +1,16 @@
 import AnimalCard from "../components/AnimalCard";
 import { useState } from "react";
 import "../css/Home.css";
+import dogImage from "../assets/images/dog.webp";
+import catImage from "../assets/images/cat.webp";
 
 function Home() {
   // useState hook sets searchQuery as the state of search box, setSearchQuery func to update it
   const [searchQuery, setSearchQuery] = useState();
 
   const animals = [
-    { id: 1, species: "Dog", description: "Cute" },
-    { id: 2, species: "Cat", description: "Cute" },
+    { id: 1, species: "Dog", description: "Cute", image: dogImage },
+    { id: 2, species: "Cat", description: "Cute", image: catImage },
   ];
 
   const handleSearch = (e) => {
