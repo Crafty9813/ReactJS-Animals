@@ -8,7 +8,7 @@ import birdImage from "../assets/images/bird.webp";
 
 function Home() {
   // useState hook sets searchQuery as the state of search box, setSearchQuery func to update it
-  const [searchQuery, setSearchQuery] = useState();
+  const [searchQuery, setSearchQuery] = useState("");
 
   const animals = [
     {
