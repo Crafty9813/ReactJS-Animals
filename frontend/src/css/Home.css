@@ -30,7 +30,7 @@
 
 .search-button {
   padding: 0.75rem 1.5rem;
-  background-color: lightsteelblue;
+  background-color: lightskyblue;
   color: white;
   border-radius: 4px;
   font-weight: 500;
@@ -39,7 +39,7 @@
 }
 
 .search-button:hover {
-  background-color: lightblue;
+  background-color: lightsteelblue;
 }
 
 @media (max-width: 639px) {

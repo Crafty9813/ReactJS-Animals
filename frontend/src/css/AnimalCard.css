@@ -14,14 +14,16 @@
 
 .animal-poster {
   position: relative;
-  aspect-ratio: 2/3;
-  width: 80%;
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden; /* Hide the parts that are left over :/ */
 }
 
 .animal-poster img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .animal-overlay {
@@ -43,7 +45,7 @@
   padding: 1rem;
 }
 
-.animal-card:hover .movie-overlay {
+.animal-card:hover .animal-overlay {
   opacity: 1;
 }
 

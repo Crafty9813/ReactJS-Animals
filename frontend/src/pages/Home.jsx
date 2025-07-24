@@ -3,18 +3,48 @@ import { useState } from "react";
 import "../css/Home.css";
 import dogImage from "../assets/images/dog.webp";
 import catImage from "../assets/images/cat.webp";
+import fishImage from "../assets/images/fish.webp";
+import birdImage from "../assets/images/bird.webp";
 
 function Home() {
   // useState hook sets searchQuery as the state of search box, setSearchQuery func to update it
   const [searchQuery, setSearchQuery] = useState();
 
   const animals = [
-    { id: 1, species: "Dog", description: "Cute", image: dogImage },
-    { id: 2, species: "Cat", description: "Cute", image: catImage },
+    {
+      id: 1,
+      species: "Dog",
+      description: "Dogs come from wolves, they are commonly pets.",
+      image: dogImage,
+    },
+    {
+      id: 2,
+      species: "Cat",
+      description: "Cats are pets, originating from larger wild cats.",
+      image: catImage,
+    },
+    {
+      id: 3,
+      species: "Fish",
+      description: "Fish are aquatic animals. They swim.",
+      image: fishImage,
+    },
+    {
+      id: 4,
+      species: "Bird",
+      description: "Birds are flying animals related to dinosaurs!",
+      image: birdImage,
+    },
   ];
 
   const handleSearch = (e) => {
     e.preventDefault(); // Keep search, don't clear it
+
+    if (!searchQuery.trim()) return;
+    if (loading) return;
+
+    setLoading(true);
+
     alert(searchQuery);
   };
 
@@ -23,7 +53,7 @@ function Home() {
       <form onSubmit={handleSearch} className="search-form">
         <input
           type="text"
-          placeholder="Search for animal species"
+          placeholder="Search for animals (i.e. dog, cat, etc."
           className="search-input"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)} // Update the searchQuery

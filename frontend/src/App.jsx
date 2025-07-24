@@ -6,12 +6,13 @@ import "./css/App.css";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import NavBar from "./components/NavBar";
+import { AnimalProvider } from "./contexts/animalContext";
 
 import AnimalCard from "./components/AnimalCard";
 
 function App() {
   return (
-    <div>
+    <AnimalProvider>
       <NavBar />
       <main className="main-content">
         <Routes>
@@ -19,8 +20,7 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
-    </div>
+    </AnimalProvider>
   );
 }
-
 export default App;
