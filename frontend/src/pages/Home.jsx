@@ -41,9 +41,6 @@ function Home() {
     e.preventDefault(); // Keep search, don't clear it
 
     if (!searchQuery.trim()) return;
-    if (loading) return;
-
-    setLoading(true);
 
     alert(searchQuery);
   };
